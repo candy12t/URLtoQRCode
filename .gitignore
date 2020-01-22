@@ -1,0 +1,4 @@
+.vscode/
+venv/
+img/
+.DS_Store
