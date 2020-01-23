@@ -1,9 +1,11 @@
 import qrcode
+import datetime
 from PIL import Image
 
 print('input url convert >> ', end='')
 url = input()
-print('input image name >> ', end='')
-name = input()
+
 img = qrcode.make(url)
-img.save('img/{}.png'.format(name))
+dt = datetime.datetime.now()
+filename = 'img/{}.png'.format(dt.strftime('%Y-%m-%d-%H-%M-%S'))
+img.save(filename)
