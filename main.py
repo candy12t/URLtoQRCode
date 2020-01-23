@@ -7,5 +7,5 @@ url = input()
 
 img = qrcode.make(url)
 dt = datetime.datetime.now()
-filename = 'img/{}.png'.format(dt.strftime('%Y-%m-%d-%H-%M-%S'))
+filename = 'img/{}.png'.format(dt.strftime('%Y%m%d%H%M%S'))
 img.save(filename)
